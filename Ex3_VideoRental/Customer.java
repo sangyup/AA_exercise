@@ -49,17 +49,17 @@ public class Customer {
 			
 			if (each.getStatus() == 1) { // returned Video (*Comments)
 				long diff = each.getReturnDate().getTime() - each.getRentDate().getTime();
-				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code
+				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code, magic number
 			} else { // not yet returned (*Comments)
 				long diff = new Date().getTime() - each.getRentDate().getTime();
-				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code
+				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code, magic number
 			}
 
 			switch (each.getVideo().getPriceCode()) {
 			case Video.REGULAR: //Feature Envy
 				eachCharge += 2;
 				if (daysRented > 2)
-					eachCharge += (daysRented - 2) * 1.5;
+					eachCharge += (daysRented - 2) * 1.5; // magic number
 				break;
 			case Video.NEW_RELEASE: //Feature Envy
 				eachCharge = daysRented * 3;
