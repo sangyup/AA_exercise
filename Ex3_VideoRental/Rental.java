@@ -51,10 +51,10 @@ public class Rental {
 		int daysRented ;
 		if (getStatus() == 1) { // returned Video
 			long diff = returnDate.getTime() - rentDate.getTime();
-			daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1;
+			daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //• Duplicate Code
 		} else { // not yet returned
 			long diff = new Date().getTime() - rentDate.getTime();
-			daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1;
+			daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //• Duplicate Code
 		}
 		if ( daysRented <= 2) return limit ;
 
