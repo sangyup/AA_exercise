@@ -47,10 +47,10 @@ public class Customer {
 			int daysRented = 0;
 			
 			
-			if (each.getStatus() == 1) { // returned Video
+			if (each.getStatus() == 1) { // returned Video (*Comments)
 				long diff = each.getReturnDate().getTime() - each.getRentDate().getTime();
 				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code
-			} else { // not yet returned
+			} else { // not yet returned (*Comments)
 				long diff = new Date().getTime() - each.getRentDate().getTime();
 				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code
 			}
