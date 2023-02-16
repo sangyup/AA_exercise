@@ -56,12 +56,12 @@ public class Customer {
 			}
 
 			switch (each.getVideo().getPriceCode()) {
-			case Video.REGULAR:
+			case Video.REGULAR: //Feature Envy
 				eachCharge += 2;
 				if (daysRented > 2)
 					eachCharge += (daysRented - 2) * 1.5;
 				break;
-			case Video.NEW_RELEASE:
+			case Video.NEW_RELEASE: //Feature Envy
 				eachCharge = daysRented * 3;
 				break;
 			}
