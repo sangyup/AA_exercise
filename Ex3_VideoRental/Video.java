@@ -25,9 +25,11 @@ public class Video {
 	public int getLateReturnPointPenalty() {
 		int pentalty = 0 ;
 		switch ( videoType ) {
-			case VHS: pentalty = 1 ; break ;
+				//magic number
+			case VHS: pentalty = 1 ; break ;	
 			case CD: pentalty = 2 ; break ;
 			case DVD: pentalty = 3 ; break ;
+				//end 
 		}
 		return pentalty ;
 	}
