@@ -18,6 +18,8 @@ public class VRUI {
 		boolean quit = false ;
 		while ( ! quit ) {
 			int command = ui.showCommand() ;
+			
+			//Switch statement
 			switch ( command ) {
 				case 0: quit = true ; break ;
 				case 1: ui.listCustomers() ; break ;
