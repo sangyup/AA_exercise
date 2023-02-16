@@ -207,6 +207,7 @@ public class VRUI {
 	}
 
 	public int showCommand() {
+		//Substituted Algorithm start
 		System.out.println("\nSelect a command !");
 		System.out.println("\t 0. Quit");
 		System.out.println("\t 1. List customers");
@@ -217,7 +218,8 @@ public class VRUI {
 		System.out.println("\t 6. Return video");
 		System.out.println("\t 7. Show customer report");
 		System.out.println("\t 8. Show customer and clear rentals");
-
+		//end
+		
 		int command = scanner.nextInt() ;
 
 		return command ;
