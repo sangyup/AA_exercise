@@ -31,7 +31,8 @@ public class Customer {
 		rentals.add(rental);
 
 	}
-
+	
+        //Long Method (Code Smell)
 	public String getReport() {
 		String result = "Customer Report for " + getName() + "\n";
 
