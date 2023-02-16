@@ -49,10 +49,10 @@ public class Customer {
 			
 			if (each.getStatus() == 1) { // returned Video (*Comments)
 				long diff = each.getReturnDate().getTime() - each.getRentDate().getTime();
-				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code
+				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code & //magic number
 			} else { // not yet returned (*Comments)
 				long diff = new Date().getTime() - each.getRentDate().getTime();
-				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code
+				daysRented = (int) (diff / (1000 * 60 * 60 * 24)) + 1; //duplicate code & //magic number
 			}
 
 			switch (each.getVideo().getPriceCode()) {
@@ -84,11 +84,11 @@ public class Customer {
 
 		result += "Total charge: " + totalCharge + "\tTotal Point:" + totalPoint + "\n";
 
-
-		if ( totalPoint >= 10 ) {
+		
+		if ( totalPoint >= 10 ) {//magic number
 			System.out.println("Congrat! You earned one free coupon");
 		}
-		if ( totalPoint >= 30 ) {
+		if ( totalPoint >= 30 ) {//magic number
 			System.out.println("Congrat! You earned two free coupon");
 		}
 		return result ;
