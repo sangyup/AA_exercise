@@ -1,7 +1,7 @@
 import java.util.Date;
 
 public class Video {
-	private String title ;
+	private String title ;//tmp
 
 	private int priceCode ;
 	public static final int REGULAR = 1 ;
